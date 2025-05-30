@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://yourusername.github.io',
+	site: 'https://jubalj.github.io',
 	base: '/jubal-site',
 	integrations: [mdx(), sitemap()],
 });
