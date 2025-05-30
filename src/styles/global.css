@@ -156,10 +156,24 @@ hr {
 }
 @media (max-width: 720px) {
 	body {
-		font-size: 18px;
+		font-size: 16px;
 	}
 	main {
 		padding: 1em;
+		width: 100%;
+		max-width: 100%;
+	}
+	h1 {
+		font-size: 2em;
+	}
+	h2 {
+		font-size: 1.5em;
+	}
+	h3 {
+		font-size: 1.3em;
+	}
+	h4 {
+		font-size: 1.1em;
 	}
 }
 
@@ -735,4 +749,260 @@ hr {
 	font-size: 0.9em;
 	color: rgb(var(--gray));
 	font-style: italic;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+	/* Big intro text */
+	.big-intro {
+		font-size: 1.2em;
+		margin: 1em 0;
+	}
+	
+	/* Photo placeholder */
+	.photo-placeholder {
+		padding: 2em 1em;
+		margin: 1em 0;
+	}
+	
+	.photo-emoji {
+		font-size: 4em;
+	}
+	
+	.photo-placeholder p {
+		font-size: 1em;
+	}
+	
+	/* Fun facts */
+	.fun-facts {
+		padding: 1.5em;
+		margin: 1em 0;
+	}
+	
+	.fun-facts li {
+		font-size: 1em;
+		padding: 0.3em 0;
+	}
+	
+	/* Activities grid */
+	.activities {
+		grid-template-columns: 1fr;
+		gap: 1em;
+		margin: 1em 0;
+	}
+	
+	.activity-card {
+		padding: 1.5em;
+	}
+	
+	.activity-card .emoji {
+		font-size: 2.5em;
+	}
+	
+	/* Services section */
+	.services-section {
+		margin: 2em 0;
+		padding: 1.5em 0;
+	}
+	
+	.services-section h2 {
+		font-size: 1.8em;
+		margin-bottom: 1em;
+	}
+	
+	.services-grid {
+		grid-template-columns: 1fr;
+		gap: 1.5em;
+	}
+	
+	.service-category {
+		padding: 1.5em;
+	}
+	
+	.service-category h3 {
+		font-size: 1.5em;
+	}
+	
+	.service-icon {
+		font-size: 2.5em;
+	}
+	
+	.service-item h4 {
+		font-size: 1.1em;
+	}
+	
+	.service-item p {
+		font-size: 0.85em;
+	}
+	
+	/* Timeline section */
+	.timeline-section {
+		margin: 2em 0;
+		padding: 1.5em 0;
+	}
+	
+	.timeline-section h2 {
+		font-size: 1.8em;
+		margin-bottom: 1em;
+	}
+	
+	.timeline {
+		padding: 1em 0;
+	}
+	
+	/* Contact section */
+	.contact-section {
+		margin: 2em 0;
+		padding: 1.5em 0;
+	}
+	
+	.contact-section h2 {
+		font-size: 1.8em;
+	}
+	
+	.contact-intro {
+		font-size: 1.1em;
+		margin-bottom: 1.5em;
+	}
+	
+	.contact-options {
+		grid-template-columns: 1fr;
+		gap: 1em;
+		margin-bottom: 2em;
+	}
+	
+	.contact-card {
+		padding: 1.5em;
+	}
+	
+	.contact-icon {
+		font-size: 2.5em;
+	}
+	
+	.contact-card h3 {
+		font-size: 1.2em;
+	}
+	
+	.hover-text {
+		display: none; /* Hide hover text on mobile */
+	}
+	
+	/* Appointment section */
+	.appointment-section {
+		padding: 1.5em;
+	}
+	
+	.appointment-section h3 {
+		font-size: 1.3em;
+	}
+	
+	.appointment-buttons {
+		flex-direction: column;
+		gap: 0.8em;
+	}
+	
+	.appointment-btn {
+		padding: 0.8em 1.5em;
+		font-size: 1em;
+		width: 100%;
+		justify-content: center;
+	}
+	
+	.appointment-btn span {
+		font-size: 1.3em;
+	}
+	
+	/* CTA */
+	.cta {
+		font-size: 1.1em;
+		margin: 2em 0 1em;
+	}
+	
+	/* Daughter qualities on about page */
+	.daughter-qualities {
+		padding: 1.5em;
+		margin: 1em 0;
+	}
+	
+	.daughter-qualities h3 {
+		font-size: 1.5em;
+	}
+	
+	.daughter-qualities li {
+		font-size: 1em;
+		padding: 0.5em 0;
+	}
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+	body {
+		font-size: 14px;
+		line-height: 1.6;
+	}
+	
+	h1 {
+		font-size: 1.8em;
+		line-height: 1.3;
+	}
+	
+	.big-intro {
+		font-size: 1.1em;
+		line-height: 1.6;
+	}
+	
+	.photo-emoji {
+		font-size: 3em;
+	}
+	
+	.activity-card .emoji,
+	.service-icon,
+	.contact-icon {
+		font-size: 2em;
+	}
+	
+	.timeline-item .emoji {
+		font-size: 2em;
+	}
+	
+	/* Reduce padding on small screens */
+	.fun-facts,
+	.activity-card,
+	.service-category,
+	.contact-card,
+	.appointment-section {
+		padding: 1em;
+	}
+	
+	/* Adjust font sizes for very small screens */
+	.service-item h4,
+	.activity h4,
+	.contact-card h3 {
+		font-size: 1em;
+	}
+	
+	.service-item p,
+	.activity p,
+	.contact-card p {
+		font-size: 0.8em;
+	}
+	
+	/* Timeline adjustments */
+	.timeline::before {
+		left: 10px;
+	}
+	
+	.timeline-item {
+		margin-left: 20px;
+	}
+	
+	.time {
+		font-size: 0.9em;
+		padding: 0.4em 0.8em;
+		left: -10px;
+	}
+	
+	.activity {
+		padding: 1em;
+	}
 }
