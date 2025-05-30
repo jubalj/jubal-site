@@ -1,0 +1,144 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`404 - Page Not Found | ${SITE_TITLE}`} description="Oops! This page needs medical attention!" />
+		<style>
+			.error-container {
+				text-align: center;
+				padding: 4em 2em;
+				min-height: 60vh;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			
+			.error-code {
+				font-size: 8em;
+				font-weight: bold;
+				background: linear-gradient(45deg, #ff6b6b, #4169e1);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				margin: 0;
+				animation: errorPulse 2s ease-in-out infinite;
+			}
+			
+			@keyframes errorPulse {
+				0%, 100% { transform: scale(1); }
+				50% { transform: scale(1.1); }
+			}
+			
+			.error-emoji {
+				font-size: 4em;
+				margin: 0.5em 0;
+				animation: errorBounce 1s ease-in-out infinite;
+			}
+			
+			@keyframes errorBounce {
+				0%, 100% { transform: translateY(0); }
+				50% { transform: translateY(-20px); }
+			}
+			
+			.error-message {
+				font-size: 1.5em;
+				color: var(--accent-dark);
+				margin: 1em 0;
+			}
+			
+			.error-jokes {
+				background: rgba(255, 255, 255, 0.95);
+				border-radius: 20px;
+				padding: 2em;
+				margin: 2em auto;
+				max-width: 600px;
+				box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+			}
+			
+			.error-jokes h3 {
+				color: var(--accent);
+				margin-bottom: 1em;
+			}
+			
+			.joke {
+				margin: 1em 0;
+				padding: 1em;
+				background: rgba(64, 224, 208, 0.1);
+				border-radius: 10px;
+				transition: transform 0.3s ease;
+			}
+			
+			.joke:hover {
+				transform: scale(1.05);
+			}
+			
+			.home-button {
+				display: inline-block;
+				margin-top: 2em;
+				padding: 1em 2em;
+				background: var(--accent);
+				color: white;
+				text-decoration: none;
+				border-radius: 50px;
+				font-size: 1.1em;
+				transition: all 0.3s ease;
+			}
+			
+			.home-button:hover {
+				transform: translateY(-3px);
+				box-shadow: 0 10px 20px rgba(64, 224, 208, 0.3);
+			}
+			
+			.home-button span {
+				margin-right: 0.5em;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="error-container">
+				<h1 class="error-code">404</h1>
+				<div class="error-emoji">🩺💻❓</div>
+				<p class="error-message">Oops! This page needs medical attention!</p>
+				
+				<div class="error-jokes">
+					<h3>🤣 Medical & Coding Jokes to Cheer You Up!</h3>
+					
+					<div class="joke">
+						<strong>Q:</strong> Why did the doctor carry a red pen?<br>
+						<strong>A:</strong> In case they needed to draw blood! 🩸
+					</div>
+					
+					<div class="joke">
+						<strong>Q:</strong> Why do programmers prefer dark mode?<br>
+						<strong>A:</strong> Because light attracts bugs! 🐛
+					</div>
+					
+					<div class="joke">
+						<strong>Q:</strong> What's a baby's favorite programming language?<br>
+						<strong>A:</strong> Cry-thon! 👶
+					</div>
+					
+					<div class="joke">
+						<strong>Error 404:</strong> Page not found<br>
+						<strong>Dr. Jubal:</strong> Don't worry, I'll deliver a healthy page soon! 🏥
+					</div>
+				</div>
+				
+				<a href="/" class="home-button">
+					<span>🏠</span>
+					Take Me Home!
+				</a>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
